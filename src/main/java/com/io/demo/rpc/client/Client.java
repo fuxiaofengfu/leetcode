@@ -15,6 +15,15 @@ public class Client {
 
 	public static void main(String[] args) throws IOException {
 
+		System.setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+//		byte []  bytes = ProxyGenerator
+//				.generateProxyClass( "$Proxy0",  new Class <?> [] {EchoInterface.class} );
+//
+//		FileOutputStream proxy = new FileOutputStream("proxy.class");
+//		proxy.write(bytes);
+//		proxy.flush();
+//		proxy.close();
+		
 		SocketChannel socketChannel = SocketChannel.open();
 		socketChannel.connect(new InetSocketAddress("127.0.0.1", 8080));
 
